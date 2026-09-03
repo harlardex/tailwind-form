@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex justify-center">
+    <div class="w-170 p-8 m-6 border">
+        <h1 class="text-3xl font-medium my-3">Job Application Form</h1><div class=" font-bold border"></div>
+        <p class="my-3 text-base/5">
+            Thank you for your interest in working with us. Please check below for the
+            avaliable job oppurtunities that meets your criteria and submit your 
+            application by filling the Job Application Form
+        </p>
+
+        <form>
+            <label for="name">Name</label>
+            <div class="flex gap-4 my-2">
+                <input class="border h-8 p-2 w-1/2" id="name" type="text" placeholder="First" required>
+                <input class="border h-8 p-2 mb-3 w-1/2" type="text" placeholder="Last" required>
+            </div>
+            <label for="email">Email</label>
+            <input class="border h-8 p-2 mt-2 mb-4 w-full" id="email" type="email" placeholder="johndoe@example.com" required>
+            <div class="flex gap-6 mb-4">
+                <div class="w-1/2">
+                    <label for="position">What position are you applying for?</label><br>
+                    <select class="border w-full h-8 mt-2 p-1" name="" id="position">
+                        <option>Manager</option>
+                        <option>Cleaner</option>
+                        <option>Accountant</option>
+                        <option>Intern</option>
+                    </select>
+                </div>
+                <div class="w-1/2">
+                    <label for="date">Avaliable Date</label><br>
+                    <input class="border w-full h-8 mt-2 p-2" id="date" type="date">
+                </div>
+            </div>
+            <p>What is your current employee status?</p>
+            <div class="grid grid-cols-2 mt=-2 mb-4">
+                <div>
+                    <input class="cursor-pointer" id="employed" type="radio" name="status">
+                    <label for="employed">Employed</label>
+                </div>
+
+                <div class="mb-1.5">
+                    <input class="cursor-pointer" id="self-employed" type="radio" name="status">
+                    <label for="self-employed">Self-Employed</label>
+                </div>
+
+                <div>
+                    <input class="cursor-pointer" id="Unemployed" type="radio" name="status">
+                    <label for="Unemployed">Unemployed</label>
+                </div>
+
+                <div>
+                    <input class="cursor-pointer" id="Student" type="radio" name="status">
+                    <label for="Student">Student</label>
+                </div>
+            </div>
+            <div class="flex gap-4 w-full my-4">
+                <div class="w-1/2">
+                    <label for="resume">Provide your resume link</label>
+                    <input class="border mt-2 h-8 p-2 w-full" id="resume" type="url" placeholder="https://www.example.com">
+                </div>
+                <div class="w-1/2">
+                    <label for="upload">Please upload your resume</label>
+                    <input class="border mt-2 h-8 p-2 w-full" type="file" placeholder="resume">
+                </div>
+            </div>
+            <label for="reference">Do you have any references? (optional)</label>
+            <div class="flex gap-4 my-2 mb-4">
+                <input class="border h-8 p-2 w-1/2" type="text" placeholder="First" id="reference">
+                <input class="border h-8 p-2 w-1/2" type="text" placeholder="Last">
+            </div>
+            <label for="reference-email">Reference e-mail</label>
+            <input class="border h-8 p-2 mt-2 mb-4 w-full" id="reference-email" type="text" placeholder="johndoe@example.com">
+
+            <button class="border py-1.5 px-3 cursor-pointer  rounded">Reset</button>
+            <button class="border py-1.5 px-3 cursor-pointer ml-2 bg-black text-white rounded">Apply</button>
+        </form>
+    </div>
+</body>
+</html>
